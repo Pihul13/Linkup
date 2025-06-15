@@ -5,6 +5,9 @@ export const signup = async (req, res) => {
     const {fullName,email,password} = req.body
     try {
         //Hashing password using bcrypt
+        if(!fullName || !email || !password){
+            return res.status(400).json({message: "Please fill all the fields."});
+        }
         if(password.length < 6){
             return res.status(400).json({message: "Password must be atleast 6 characters."});
         }
