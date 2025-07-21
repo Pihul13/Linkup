@@ -3,7 +3,7 @@ import React from 'react'
 const ProfilePage = () => {
   return (
     <div>
-      profile
+      <h1>profile</h1>
     </div>
   )
 }
